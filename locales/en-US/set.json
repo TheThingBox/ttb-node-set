@@ -1,0 +1,10 @@
+{
+    "set": {
+        "value": "Value",
+        "name": "Name",
+        "advanced": {
+            "title": "Advanced",
+            "msg": "Apply on msg."
+        }
+    }
+}

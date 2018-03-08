@@ -1,0 +1,16 @@
+{
+  "name": "ttb-node-set",
+  "version": "0.0.1",
+  "description": "This node alow you to set the property of msg.",
+  "node-red": {
+      "nodes": {
+          "set": "set.js"
+      }
+  },
+  "keywords": [
+    "node-red",
+    "set"
+  ],
+  "author": "http://www.digitalairways.com/",
+  "license": "http://www.wtfpl.net"
+}
