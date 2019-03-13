@@ -1,16 +1,30 @@
 {
   "name": "ttb-node-set",
-  "version": "0.0.1",
-  "description": "This node alow you to set the property of msg.",
+  "version": "0.1.0",
+  "description": "ttb-node-set is a Node-RED node that set a property of msg.",
+  "main": "none",
   "node-red": {
-      "nodes": {
-          "set": "set.js"
-      }
+    "nodes": {
+      "set": "nodes/set.js"
+    }
   },
   "keywords": [
     "node-red",
-    "set"
+    "set",
+    "thethingbox",
+    "timesquair"
   ],
-  "author": "http://www.digitalairways.com/",
-  "license": "http://www.wtfpl.net"
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thethingbox/ttb-node-set.git"
+  },
+  "author": "thethingbox <thethingbox@gmail.com> (http://thethingbox.io/)",
+  "license": "http://www.wtfpl.net",
+  "bugs": {
+    "url": "https://github.com/TheThingBox/ttb-node-set/issues"
+  },
+  "homepage": "https://github.com/TheThingBox/ttb-node-set#readme"
 }

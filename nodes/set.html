@@ -1,0 +1,60 @@
+<script type="text/x-red" data-template-name="set">
+  <div class="form-row">
+    <label for="node-input-value"><i class="icon-tag"></i> <span data-i18n="set.value"></span></label>
+    <input type="text" id="node-input-value">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="set.name"></span></label>
+    <input type="text" id="node-input-name">
+  </div>
+  <div style="cursor: pointer;" class="accordion-header ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" id="nset-advanced">
+    <span style="display: inline-block;">
+      <span class="ui-icon ui-icon-triangle-1-e" id="nset-advanced-arrow"></span>
+    </span>
+    <span data-i18n="set.advanced.title"></span>
+  </div>
+  <div class="form-row" style="padding-top: 7px; padding-bottom: 7px; margin-top: -1px; border-left: 1px solid #d3d3d3; border-bottom: 1px solid #d3d3d3; border-right: 1px solid #d3d3d3; border-radius: 2px; display: none;" id="nset-advanced-from">
+    <span style="margin-left: 10px;"><span data-i18n="set.advanced.msg"></span><input type="text" style="width:250px" id="node-input-property"></span>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="set">
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType("set", {
+    category: "basic",
+    color: "#fdd0a2",
+    defaults: {
+      property: { value: "payload", required: true },
+      value: { value: "" },
+      name: { value: "" }
+    },
+    inputs:1,
+    outputs:1,
+    icon: "inject.png",
+    align: "right",
+    paletteLabel: "Set",
+    label: function() {
+      return this.name || this.value || "Set";
+    },
+    labelStyle: function() {
+      return this.name ? "node_label_italic" : "";
+    },
+    oneditprepare: function() {
+      $("#nset-advanced").click(function() {
+        var form = $("#nset-advanced-from");
+        var arrow = $("#nset-advanced-arrow");
+        if(form.css("display") == "none") {
+          form.css("display", "block");
+          arrow.removeClass("ui-icon-triangle-1-e");
+          arrow.addClass("ui-icon-triangle-1-s");
+        } else {
+          form.css("display", "none");
+          arrow.removeClass("ui-icon-triangle-1-s");
+          arrow.addClass("ui-icon-triangle-1-e");
+        }
+      });
+    }
+  });
+</script>
